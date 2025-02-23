@@ -1,46 +1,56 @@
-# Autenticator
+# Testes Automatizados para Autenticação
 
-Projeto Django básico criado para testes de QA.
+Este repositório contém os testes automatizados para a funcionalidade de autenticação do nosso sistema. Os testes foram desenvolvidos usando o framework de testes do Django (`TestCase`).
 
-## 🚀 Configuração do ambiente
+## Funcionalidades Testadas
 
-Siga os passos abaixo para rodar o projeto localmente.
+* Login de usuário (sucesso e falha)
+* Registro de usuário (validação de nome de usuário duplicado)
 
-### 📌 Clonar o repositório
+## Tecnologias
+
+* Python
+* Django
+* unittest (framework de testes do Django)
+
+## Pré-requisitos
+
+* Python 3.x instalado
+* Django instalado
+* Ambiente virtual (recomendado)
+
+## Configuração
+
+1.  Clone este repositório:
+
+    ```bash
+    git clone <URL_DO_REPOSITORIO>
+    cd <DIRETORIO_DO_REPOSITORIO>
+    ```
+
+2.  Crie e ative um ambiente virtual (recomendado):
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # No Linux/macOS
+    venv\Scripts\activate  # No Windows
+    ```
+
+3.  Instale as dependências:
+
+    ```bash
+    pip install -r requirements.txt #Caso tenha um arquivo requirements.txt
+    ```
+
+4.  Execute as migrations do Django:
+
+    ```bash
+    python manage.py migrate
+    ```
+
+## Executando os Testes
+
+Para executar os testes, utilize o seguinte comando:
 
 ```bash
-git clone git@github.com:danellaclaudioluiz/autenticator.git
-cd autenticator
-```
-
-### 🐍 Criar e ativar ambiente virtual
-
-```bash
-python -m venv venv
-source venv/bin/activate  # Para Linux/Mac
-venv\Scripts\activate     # Para Windows
-```
-
-### 📦 Instalar dependências
-
-```bash
-pip install -r requirements.txt
-```
-
-### 🔄 Aplicar migrações
-
-```bash
-python manage.py migrate
-```
-
-### 🚀 Rodar o servidor
-
-```bash
-python manage.py runserver
-```
-
-Agora o projeto estará rodando em `http://127.0.0.1:8000/` 🎉
-
----
-
-**Criado em 10 minutos para testes de QA** 🕒⚡
+python manage.py test accounts
